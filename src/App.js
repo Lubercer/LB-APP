@@ -3,22 +3,20 @@ import './App.css';
 
 const App = () => {
 
-  const persona = {nombre: "luna", altura: "174"};
+  const persona = {nombre: "ONLY GIRLS TATTOO APP", creador: "Luna Bercernelo"};
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        hola {persona.nombre} de la altura {persona.altura}cm
+        {persona.nombre} creador por: {persona.creador}
         </p>
-        <buttonComponent/>
+        <ButtonComponent />
       </header>
     </div>
   );
 }
-const buttonComponent = () => {
-  return (
-    <button>LB TURNOS</button>
-  );
+const ButtonComponent = () => {
+return <button> ENTRAR </button>
 }
 export default App;
