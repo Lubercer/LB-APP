@@ -1,0 +1,13 @@
+h1 { color: white;
+    text-align: center;
+}
+.navbar-brand {
+    color: #ead2d7;
+}
+#botonBuscar {
+    color: #ead2d7;
+}
+#body {
+    background-color: #ead2d7;
+    font-family: 'Bebas Neue', sans-serif;
+}
