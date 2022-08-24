@@ -12,7 +12,8 @@ const App = () => {
     <NavbarLightMode/>
     </div>
     <div>
-      <ItemListContainer greeting="Bienvenidxs a Only Girls Tattoo" />
+      <ItemListContainer greeting="Bienvenidxs a Only Girls Tattoo"/>
+      
   </div>
   </header>
   );

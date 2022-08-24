@@ -11,3 +11,8 @@ h1 { color: white;
     background-color: #ead2d7;
     font-family: 'Bebas Neue', sans-serif;
 }
+#count {
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+}
