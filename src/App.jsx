@@ -8,14 +8,13 @@ import './Styles.css';
 const App = () => {
   return (
     <header>
-    <div>
-    <NavbarLightMode/>
-    </div>
-    <div>
-      <ItemListContainer greeting="Bienvenidxs a Only Girls Tattoo"/>
-      
-  </div>
-  </header>
+      <div>
+        <NavbarLightMode />
+      </div>
+      <div>
+        <ItemListContainer greeting="Bienvenidxs a Only Girls Tattoo" />
+      </div>
+    </header>
   );
 }
 export default App;
