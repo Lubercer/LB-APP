@@ -53,13 +53,18 @@ h1 { color: white;
     color: white;
 	padding: 20px;
 }
-/* button {
+ button {
     text-align: center;
-    color:  #a8a8a8;
+    color:  #605f5f;
     border-color: #a8a8a8;
-} */
+
+} 
 span#spanCount {
 color: #a8a8a8;
 padding: 1rem;
 text-align: center;
+}
+#cargando {
+	color: #a8a8a8;
+	margin: 25%;
 }

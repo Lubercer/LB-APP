@@ -5,18 +5,23 @@ import NavbarLightMode from './components/Navbar/NavbarLightMode';
 import ItemListContainer from './Container/ItemListContainer';
 import './Styles.css';
 import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CartWidget from './components/CartWidget/CartWidget';
 
 const App = () => {
   return (
-    <header>
-      <div>
-        <NavbarLightMode />
-      </div>
-      <div>
-        {/* <ItemListContainer greeting="Bienvenidxs a Only Girls Tattoo" /> */}
-        <ItemDetailContainer greeting="Bienvenidxs a Only Girls Tattoo" />
-      </div>
-    </header>
+    <>
+    <BrowserRouter>
+    <NavbarLightMode/>
+    <Routes>
+      <Route path="/" element={<ItemListContainer/>} />
+      <Route path="producto/:idProducto" element={<ItemListContainer/>} />
+      <Route path="categoria/:idCategoria" element={<ItemListContainer/>} />
+      <Route path="detalle/:idProducto" element={<ItemDetailContainer/>} />
+      <Route path="cartWidget" element={<CartWidget/>} />
+    </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 export default App;
