@@ -6,14 +6,13 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail";
 const ItemDetailContainer = (props) => {
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(false);
-    const {id} = useParams ();
+    const { id } = useParams ();
 
     const buscarProductos = async () => {
         try {
             const response = await fetch(`https://Api.mercadolibre.com/items/${id}`)
             const data = await response.json();
-            console.log(response);
-            setProductos(data.results);
+            setProductos(data);
             setCargando(true)
         } catch (e) {
             console.log(e);
@@ -22,18 +21,18 @@ const ItemDetailContainer = (props) => {
     useEffect(() => {
             buscarProductos();
     }, [id]);
-   
+    
     if (!cargando) {
         return (
             <button id="cargando" type="button" disabled>
-            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
             Loading...
             </button>
             );
     }
     return (
         <div>
-            {productos && <ItemDetail items={productos} />}
+            <ItemDetail items={productos} />
         </div>
     );
 }

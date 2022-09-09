@@ -12,7 +12,7 @@ const ItemList = ({ items }) => {
                 return (
                     <div key={index}>
                         <Item key={items.id} items={items} />
-                    { <ItemCount initial={1} stock={10} onAdd={onAdd} /> }
+                    <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
                     </div>
                 )
             })
