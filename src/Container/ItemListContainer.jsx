@@ -5,11 +5,10 @@ import ItemList from "../components/ItemList/ItemList";
 
 const ItemListContainer = (props) => {
     const {idCategoria} = useParams();
-    console.log(idCategoria);
     const [productos, setProductos] = useState([]);
     const buscarProductos = async () => {
         try {
-            const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=Piercing+{idCategoria}`)
+            const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=Piercing+${idCategoria||""}`)
             const data = await response.json();
             setProductos(data.results);
         }catch (e) {
@@ -19,8 +18,7 @@ const ItemListContainer = (props) => {
     useEffect( () => {
     buscarProductos ();
 
-    }, []);
-   
+    }, [idCategoria]);
     return (
         <div>
             <h1>{props.greeting}</h1>

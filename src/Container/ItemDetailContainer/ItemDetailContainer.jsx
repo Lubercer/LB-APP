@@ -6,12 +6,14 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail";
 const ItemDetailContainer = (props) => {
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(false);
-    const {idProducto} = useParams;
+    const {id} = useParams ();
+
     const buscarProductos = async () => {
         try {
-            const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=piercing`)
+            const response = await fetch(`https://Api.mercadolibre.com/items/${id}`)
             const data = await response.json();
-            setProductos(data.results[1]);
+            console.log(response);
+            setProductos(data.results);
             setCargando(true)
         } catch (e) {
             console.log(e);
@@ -19,7 +21,8 @@ const ItemDetailContainer = (props) => {
     }
     useEffect(() => {
             buscarProductos();
-    }, []);
+    }, [id]);
+   
     if (!cargando) {
         return (
             <button id="cargando" type="button" disabled>
