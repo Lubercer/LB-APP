@@ -8,7 +8,7 @@ const ItemDetail = ({items}) => {
     }
     return (
         <ul className="cards"> 
-            <a href="" className="card">
+            <div href="" className="card">
                 <img src={items.thumbnail} class="card__image" alt="" />
                 <div className="card__overlay">
                     <div class="card__header">
@@ -31,7 +31,7 @@ const ItemDetail = ({items}) => {
                         } 
                         </div>    
                 </div>
-            </a>
+            </div>
     
     </ul>
     );
