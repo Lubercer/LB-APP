@@ -3,16 +3,12 @@ import ItemCount from "../ItemCount/ItemCount";
 import Item from "../Item/Item";
 
 const ItemList = ({ items }) => {
-    const onAdd = (valor) => {
-        (console.log(`Compraste ${valor} unidades`));
-    }
     return (
-        <div>{
+        <div className="d-flex flex-wrap">{
             items.map((items, index) => {
                 return (
-                    <div key={index}>
+                    <div className="col-md-4" key={index}>
                         <Item key={items.id} items={items} />
-                    <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
                     </div>
                 )
             })

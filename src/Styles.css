@@ -61,6 +61,7 @@ button {
 	text-align: center;
 	color: #605f5f;
 	border-color: #a8a8a8;
+	
 
 }
 
@@ -88,16 +89,15 @@ body {
 	font-family: 'Noto Sans JP', sans-serif;
 	background-color: #fef8f8;
 }
-
 .cards {
 	display: grid;
+
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
 	margin: 4rem 25vw;
 	padding: 0;
 	list-style-type: none;
 }
-
 .card {
 	position: relative;
 	display: block;
@@ -192,6 +192,5 @@ body {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
-	overflow: hidden;
 	font-size: 25px;
 }

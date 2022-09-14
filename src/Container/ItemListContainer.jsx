@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemCount from "../components/ItemCount/ItemCount";
 import ItemList from "../components/ItemList/ItemList";
 
 const ItemListContainer = (props) => {
