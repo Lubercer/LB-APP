@@ -6,7 +6,7 @@ const ItemList = ({ items }) => {
     return (
         <div className="d-flex flex-wrap">{
             items.map((items, index) => {
-                return (
+                return (               
                     <div className="col-md-4" key={index}>
                         <Item key={items.id} items={items} />
                     </div>

@@ -1,10 +1,14 @@
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CardContext";
 const ItemDetail = ({items}) => {
     const [carrito, setCarrito] = useState (false);
-    const onAdd = (valor) => {
+    const {addCart} = useCartContext();
+
+    const onAdd = (quantity) => {
     setCarrito (true);
+    // addCart (items, quantity);
     }
     return (
         <ul className="cards"> 
@@ -23,7 +27,7 @@ const ItemDetail = ({items}) => {
                         <div>
                             {
                         carrito 
-                            ? <Link to="cartWidget">
+                            ? <Link to="comprar">
                                 <button id="buttonComprar">
                             COMPRAR</button>
                             </Link>
