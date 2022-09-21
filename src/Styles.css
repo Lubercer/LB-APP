@@ -32,11 +32,34 @@ h1 {
 }
 
 .navbar-brand {
-	color: #ead2d7;
-}
+			font-size: 50px;
+			text-transform: uppercase;
+			font-weight: 800;
+			background: linear-gradient(to right,#c7a9b8 30%, #6e6e6e 60%, #cbc9c9 70%);
+			background-size: auto auto;
+			background-clip: border-box;
+			background-size: 200% auto;
+			background-clip: text;
+			text-fill-color: transparent;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation: textclip 4.5s linear infinite;
+			
+
+	}
+	
+	@keyframes textclip {
+		to {
+			background-position: 200% center;
+		}
+	}
+	
+
 
 #botonBuscar {
 	color: #ead2d7;
+	background-color: whitesmoke;
+	border-color: #a8a8a8;
 }
 
 #body {
@@ -252,7 +275,7 @@ button.ghost {
 }
 
 form {
-	background-color: #FFFFFF;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -273,7 +296,7 @@ input {
 .container {
 	background-color: #fff;
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
@@ -440,5 +463,27 @@ footer a {
 .itemCart img {
 	width: 200px;
 	margin: auto;
-
+}
+#carritoTexto {
+	font-size: 20px;
+	color: #4d4d4d;
+}
+ #linkCompra {
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 7px;
+	border-bottom-left-radius: 0;
+	background-color: var(--feedback-secondary-color);
+	color: var(--feedback-primary-color);
+	transition: all 0.3s;
+	color: var(--feedback-primary-color);
+	background-color: var(--background-color);
+	background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffacac' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	animation: animatedBackground 5s linear infinite alternate;
+	text-decoration: none;
+	margin: 25px;
+	color: rgb(35, 34, 34);
+}
+#navStyle {
+	font-size: 20px;
 }

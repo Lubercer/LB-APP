@@ -10,14 +10,11 @@ const NavbarLightMode = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand as={Link} to="/">ONLY GIRLS TATTOO</Navbar.Brand>
+                <Navbar.Brand  to="/">ONLY GIRLS TATTOO</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll>
-                        <Nav.Link as={Link} to='/'>CATALOGO</Nav.Link>
+                    <Nav className="me-auto my-2 my-lg-0"  id="navStyle" style={{ maxHeight: '100px' }} navbarScroll>
+                        <Nav.Link  as={Link} to='/'>CATALOGO</Nav.Link>
                         <NavDropdown title="CATEGORIAS" id="navbarScrollingDropdown">
                             <Nav.Link as={Link} to='categoria/aceroinoxidable'>ACERO QUIRURGICO</Nav.Link >
                             <Nav.Link as={Link} to='categoria/titanio'>
@@ -36,7 +33,7 @@ const NavbarLightMode = () => {
                             className="me-2"
                             aria-label="Search"
                             />
-                        <Button id='botonBuscar' variant="outline-success">BUSCAR</Button>
+                        <Button id='botonBuscar'>BUSCAR</Button>
                     </Form>
                 </Navbar.Collapse>
             </Container>
