@@ -8,7 +8,7 @@ const ItemDetail = ({items}) => {
 
     const onAdd = (quantity) => {
     setCarrito (true);
-    // addCart (items, quantity);
+    addCart (items, quantity);
     }
     return (
         <ul className="cards"> 
@@ -27,7 +27,7 @@ const ItemDetail = ({items}) => {
                         <div>
                             {
                         carrito 
-                            ? <Link to="comprar">
+                            ? <Link to="Cart">
                                 <button id="buttonComprar">
                             COMPRAR</button>
                             </Link>

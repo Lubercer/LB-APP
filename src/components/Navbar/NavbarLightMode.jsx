@@ -25,13 +25,10 @@ const NavbarLightMode = () => {
                             </Nav.Link>
                             <NavDropdown.Divider />
                         </NavDropdown>
-                        <Nav.Link href="#" disabled>
-                            PREGUNTAS FRECUENTES
-                        </Nav.Link>
-                    </Nav>
-                    <Nav.Link to='cartWidget'>
+                        <Nav.Link >
                     <CartWidget/>
                     </Nav.Link>
+                    </Nav>    
                     <Form className="d-flex">
                         <Form.Control
                             type="search"

@@ -6,8 +6,7 @@ import ItemListContainer from './Container/ItemListContainer';
 import './Styles.css';
 import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import CartWidget from './components/CartWidget/CartWidget';
-import Form from './components/Form/Form';
+import Cart from './components/Cart/Cart';
 import React from 'react';
 import CartProvider from './context/CardContext';
 
@@ -22,8 +21,7 @@ const App = () => {
             <Route path="producto/:idProducto" element={<ItemListContainer />} />
             <Route path="categoria/:idCategoria" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
-            <Route path="cartWidget" element={<CartWidget />} />
-            <Route path="/item/:id/comprar" element={<Form />} />
+            <Route path="/item/:id/Cart" element={<Cart />} />
           </Routes>
       </CartProvider>   
       </BrowserRouter>
