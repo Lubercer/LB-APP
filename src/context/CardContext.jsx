@@ -12,7 +12,7 @@ const limpiarCart = () => setCart([]);
 
 const busquedaCart = (id) => cart.find(productos => productos.id === id) ? true : false;
 
-const borrarCarrito = (id) => setCart (cart.filter(productos => productos.id =! id));
+const borrarCarrito = (id) => setCart (cart.filter(productos => productos.id !== id));
 
 const addCart = (items, quantity) => {
 		if (busquedaCart(items.id)) {
