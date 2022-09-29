@@ -13,7 +13,7 @@ const ItemDetail = ({items}) => {
     return (
         <ul className="cards"> 
             <div href="" className="card">
-                <img src={items.thumbnail} class="card__image" alt="" />
+                <img src={items.image} class="card__image" alt="" />
                 <div className="card__overlay">
                     <div class="card__header">
                         <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
