@@ -35,14 +35,14 @@ h1 {
 			font-size: 50px;
 			text-transform: uppercase;
 			font-weight: 800;
-			background: linear-gradient(to right,#c7a9b8 30%, #6e6e6e 60%, #cbc9c9 50%);
+			background: linear-gradient(to right,#e2abbb 30%, #86757c 20%, #f3dde1 50%);
 			background-size: auto auto;
 			background-clip: border-box;
 			background-size: 200% auto;
 			background-clip: text;
 			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			animation: textclip 4.5s linear infinite;
+			-webkit-text-fill-color:#a4a4a4d4;
+			animation: textclip 1.5s linear infinite;
 	}
 	
 	@keyframes textclip {
@@ -483,4 +483,22 @@ footer a {
 }
 #navStyle {
 	font-size: 20px;
+}
+#compra{
+	font-size: 30px;
+	color: #b8a7ad;
+	animation: luna 1s linear 0s infinite normal forwards;
+}
+@keyframes luna {
+	0% {opacity: 1; }
+	50% {opacity: 0.2; }
+	100% {opacity: 1; } }
+
+	#subCompra{
+	font-size: 30px;
+	color: #b8a7ad;
+}
+#totalPrecio {
+	font-size: 30px;
+	color: #777072;
 }
