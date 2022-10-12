@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CardContext";
 import ItemCart from "../ItemCart/ItemCart";
+import Swal from "sweetalert2"
 
 const Cart = () => {
     const { cart, precioTotal } = useCartContext();
@@ -13,7 +14,6 @@ const Cart = () => {
             mail: 'luna_bercernelo@icloud.com',
             telefono: '1132456723',
             direccion: 'Av Juan Domingo 2322'
-
         },
         items: cart.map(productos =>({id: productos.id, title:productos.title, quantity:productos.quantity})),
         total: precioTotal(),
@@ -23,6 +23,7 @@ const Cart = () => {
         const ordersCollection = collection (db,'orders');
         addDoc(ordersCollection, order)
         .then (({id})=> console.log(id))
+
     };
     if (cart.length === 0) {   
         return (

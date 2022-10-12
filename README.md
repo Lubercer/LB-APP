@@ -1,1 +1,1 @@
-Only Girls Tattoo es un proyecto sobre una tienda de piercing y proximamente una app para reservar turnos.
+Only Girls Tattoo es un proyecto sobre una tienda de piercing donde cada persona puede elegir su piercing y en material.
