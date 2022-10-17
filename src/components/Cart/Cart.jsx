@@ -16,17 +16,16 @@ const Cart = () => {
         total: precioTotal(),
     }
     const handleInput = ({name, value}) => {
-        console.log({[name]: value})
         setCliente({...cliente, [name]: value})
-        console.log(cliente);
     }
     const handleClick = () => {
         const db = getFirestore();
         const ordersCollection = collection (db,'orders');
         addDoc(ordersCollection, order)
-        .then (({id})=> console.log(id))
-
-    };
+        .then (({id})=> {
+            Swal.fire ('Su pedido fue registrado con el numero de orden:', id, 'sucess')
+    });
+}
     if (cart.length === 0) {   
         return (
             <>
@@ -64,7 +63,6 @@ const Cart = () => {
                     name="password" 
                     type="password" 
                     placeholder="password"/>
-                    <button>CREAR CUENTA</button>
                 </form>
             </div>
             <button onClick={handleClick} id="compra">Finalizar Compra</button>
