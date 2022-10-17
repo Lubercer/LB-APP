@@ -10,7 +10,7 @@ const NavbarLightMode = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand to="/">ONLY GIRLS TATTOO</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">ONLY GIRLS TATTOO</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav className="me-auto my-2 my-lg-0" id="navStyle" style={{ maxHeight: '100px' }} navbarScroll>
@@ -20,9 +20,7 @@ const NavbarLightMode = () => {
                             <Nav.Link as={Link} to='categoria/titanio'>TITANIO</Nav.Link>
                             <NavDropdown.Divider />
                         </NavDropdown>
-                        <Nav.Link >
                             <CartWidget />
-                        </Nav.Link>
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control
