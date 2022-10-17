@@ -3,20 +3,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CardContext";
 import ItemCart from "../ItemCart/ItemCart";
+import { useState, useContext } from "react";
 import Swal from "sweetalert2"
 
 const Cart = () => {
     const { cart, precioTotal } = useCartContext();
+    const [cliente, setCliente] = useState({});
 
     const order = {
-        cliente: {
-            name:'Luna Bercernelo',
-            mail: 'luna_bercernelo@icloud.com',
-            telefono: '1132456723',
-            direccion: 'Av Juan Domingo 2322'
-        },
+        cliente,
         items: cart.map(productos =>({id: productos.id, title:productos.title, quantity:productos.quantity})),
         total: precioTotal(),
+    }
+    const handleInput = ({name, value}) => {
+        console.log({[name]: value})
+        setCliente({...cliente, [name]: value})
+        console.log(cliente);
     }
     const handleClick = () => {
         const db = getFirestore();
@@ -42,6 +44,29 @@ const Cart = () => {
             <p id="totalPrecio">
             Total: ${precioTotal()}
             </p>
+            <div>
+                <form action="#">
+                    <input
+                    onChange={({target})=> handleInput(target)}
+                    value={cliente.name}
+                    name="name" 
+                    type="text" 
+                    placeholder="name"/>
+                    <input
+                    onChange={({target})=> handleInput(target)}
+                    value={cliente.email}
+                    name="email" 
+                    type="text" 
+                    placeholder="email"/>
+                    <input
+                    onChange={({target})=> handleInput(target)}
+                    value={cliente.password}
+                    name="password" 
+                    type="password" 
+                    placeholder="password"/>
+                    <button>CREAR CUENTA</button>
+                </form>
+            </div>
             <button onClick={handleClick} id="compra">Finalizar Compra</button>
         </>
     )
